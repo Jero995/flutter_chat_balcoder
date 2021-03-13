@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_balcoder/ui/auth/auth_service.dart';
+import 'package:flutter_chat_balcoder/ui/auth/root_page.dart';
 import 'package:flutter_chat_balcoder/ui/home/home_page.dart';
 
 void main() async {
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData( 
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: RootPage(authService: new AuthService(),)
     );
   }
 }

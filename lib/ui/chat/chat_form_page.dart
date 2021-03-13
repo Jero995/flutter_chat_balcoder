@@ -48,6 +48,7 @@ class _ChatFormPageState extends State<ChatFormPage> {
               duration: Duration(milliseconds: 1), curve: Curves.fastOutSlowIn);
               });
             return ListView.builder(
+              controller: _listViewController,
               itemCount: _chatList.length,
               itemBuilder: (BuildContext context, int index) { 
                 return Padding(
